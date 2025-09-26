@@ -1,0 +1,743 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Tank Lingo - Business Terms, Simply Explained</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'shark-navy': '#010326',
+                        'shark-blue': '#0F468C',
+                        'shark-teal': '#0578A6',
+                        'shark-cyan': '#049DBF',
+                        'shark-gold': '#F2D852'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(135deg, #010326 0%, #0F468C 35%, #0578A6 65%, #049DBF 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .quiz-option {
+            transition: all 0.2s ease;
+        }
+        .quiz-option:hover {
+            background-color: rgba(4, 157, 191, 0.1);
+            border-color: #049DBF;
+        }
+        .quiz-option.correct {
+            background-color: rgba(34, 197, 94, 0.1);
+            border-color: #22c55e;
+        }
+        .quiz-option.incorrect {
+            background-color: rgba(239, 68, 68, 0.1);
+            border-color: #ef4444;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md relative z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <!-- Shark Tank Logo -->
+                    <div class="flex-shrink-0">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA2MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMzVIMTBMMTUgMjVIMjBMMjUgMzVIMzBMMzUgMTVINDBMNDUgMzVINTBMNTUgMjBINjAiIHN0cm9rZT0iIzA0OURCRiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjIiIHk9IjMyIiB3aWR0aD0iNTYiIGhlaWdodD0iMyIgZmlsbD0iIzA0OURCRiIvPgo8L3N2Zz4=" alt="Shark Tank Logo" class="h-8 w-12">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-playfair font-bold text-shark-navy">Shark Tank Lingo</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#glossary" class="text-shark-navy hover:text-shark-blue transition-colors">Glossary</a>
+                    <a href="#quiz" class="text-shark-navy hover:text-shark-blue transition-colors">Quiz</a>
+                    <a href="#blog" class="text-shark-navy hover:text-shark-blue transition-colors">Blog</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-shark-navy">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero py-20 px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">
+                    Business Terms, <span class="text-shark-gold">Simply Explained</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-100 mb-8 font-inter">
+                    Decode the language of entrepreneurship with real-world examples from Shark Tank pitches and beyond
+                </p>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Search business terms... (e.g. 'valuation', 'equity')" 
+                           class="w-full px-6 py-4 text-lg rounded-full border-0 shadow-2xl focus:outline-none focus:ring-4 focus:ring-shark-gold/30 pl-14"
+                           data-mock="true">
+                    <i class="fas fa-search absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <!-- TODO: Implement search functionality with real-time filtering -->
+                </div>
+            </div>
+
+            <!-- Feature Cards Preview -->
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Simple Explanations</h3>
+                    <p class="text-gray-200">Complex business terms broken down into everyday language</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Real Examples</h3>
+                    <p class="text-gray-200">Learn from actual Shark Tank pitches and real-world scenarios</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🎮</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Interactive Learning</h3>
+                    <p class="text-gray-200">Test your knowledge with fun quizzes and gamified challenges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Quote Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <blockquote class="text-2xl md:text-3xl font-playfair italic text-shark-navy mb-4">
+                "Yeh business mein bas ek hi mantra hai - simple baat, clear vision!"
+            </blockquote>
+            <cite class="text-lg text-shark-blue font-semibold">- Aman Gupta, boAt Co-founder</cite>
+        </div>
+    </section>
+
+    <!-- Master the Language Section -->
+    <section id="glossary" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-playfair font-bold text-shark-navy mb-4">
+                    Master the Language of Business
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore our comprehensive collection of business terms with real-world examples and Shark Tank insights to boost your entrepreneurial vocabulary.
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 bg-shark-blue text-white rounded-full font-medium hover:bg-shark-teal transition-colors" data-filter="all">All Terms</button>
+                <button class="px-6 py-2 bg-white text-shark-navy rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200" data-filter="beginner">Beginner</button>
+                <button class="px-6 py-2 bg-white text-shark-navy rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200" data-filter="finance">Finance</button>
+                <button class="px-6 py-2 bg-white text-shark-navy rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200" data-filter="marketing">Marketing</button>
+                <button class="px-6 py-2 bg-white text-shark-navy rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200" data-filter="operations">Operations</button>
+            </div>
+
+            <!-- Business Terms Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Term Card 1: Valuation -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="finance">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-blue-100 rounded-full p-3">
+                            <i class="fas fa-chart-line text-shark-blue text-xl"></i>
+                        </div>
+                        <span class="bg-blue-50 text-shark-blue px-3 py-1 rounded-full text-sm font-medium">Finance</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Valuation</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">The estimated worth of a company based on its assets, revenue, and growth potential.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">It's like asking "How much is my company worth?" - similar to getting your house appraised before selling.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"You're asking for ₹50 lakhs for 10% equity, which values your company at ₹5 crores. Can you justify this valuation?" - Namita Thapar</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-shark-blue hover:text-shark-teal font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Term Card 2: Equity -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="finance">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-green-100 rounded-full p-3">
+                            <i class="fas fa-pie-chart text-green-600 text-xl"></i>
+                        </div>
+                        <span class="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Finance</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Equity</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">Ownership stake in a company, typically expressed as a percentage.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">It's like owning a slice of pizza from the whole pizza. The bigger your slice, the more control and profits you get.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"Main aapko ₹1 crore dunga 20% equity ke liye. Yani aapka 20% hissa mera ho jayega." - Anupam Mittal</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-green-600 hover:text-green-700 font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Term Card 3: Revenue Model -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="business">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-purple-100 rounded-full p-3">
+                            <i class="fas fa-coins text-purple-600 text-xl"></i>
+                        </div>
+                        <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Strategy</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Revenue Model</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">The strategy and methods a company uses to generate income from its operations.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">How does your business make money? Like a restaurant selling food, Netflix charging monthly subscriptions, or YouTube showing ads.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"Aapka revenue model kya hai? Sirf product bech kar paisa kamaoge ya koi subscription model bhi hai?" - Peyush Bansal</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-purple-600 hover:text-purple-700 font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Term Card 4: Customer Acquisition Cost (CAC) -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="marketing">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-orange-100 rounded-full p-3">
+                            <i class="fas fa-users text-orange-600 text-xl"></i>
+                        </div>
+                        <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">Marketing</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Customer Acquisition Cost (CAC)</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">The total cost spent on acquiring a new customer, including marketing and sales expenses.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">How much money do you spend on ads, marketing, and sales to get one new customer? Like spending ₹100 on Facebook ads to get one person to buy your product.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"If your CAC is ₹500 and your average order value is ₹300, you're losing money on every customer!" - Vineeta Singh</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-orange-600 hover:text-orange-700 font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Term Card 5: Scalability -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="operations">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-teal-100 rounded-full p-3">
+                            <i class="fas fa-rocket text-teal-600 text-xl"></i>
+                        </div>
+                        <span class="bg-teal-50 text-teal-600 px-3 py-1 rounded-full text-sm font-medium">Growth</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Scalability</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">The ability of a business to grow and manage increased demand without proportionally increasing costs.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">Can your business handle 10x more customers without 10x more work? Like WhatsApp serving millions without hiring millions of employees.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"Yeh business scalable hai ki nahi? Agar orders 100 guna badh jayen toh kya karoge?" - Ashneer Grover</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-teal-600 hover:text-teal-700 font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Term Card 6: Burn Rate -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-category="finance">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="bg-red-100 rounded-full p-3">
+                            <i class="fas fa-fire text-red-600 text-xl"></i>
+                        </div>
+                        <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-medium">Finance</span>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-3">Burn Rate</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Business Definition:</h4>
+                            <p class="text-gray-600" data-mock="true">The rate at which a company spends its available capital or cash reserves.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">In Simple Terms:</h4>
+                            <p class="text-gray-600" data-mock="true">How fast are you spending money each month? Like having ₹10 lakhs in your bank and spending ₹2 lakhs monthly - your burn rate is ₹2 lakhs.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-shark-navy mb-2">🦈 Shark Tank Example:</h4>
+                            <p class="text-gray-700 text-sm" data-mock="true">"Aapka monthly burn rate kitna hai? Aur kitne mahine tak paisa chalega?" - Ghazal Alagh</p>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-4 text-red-600 hover:text-red-700 font-semibold text-sm flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-shark-blue hover:bg-shark-teal text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors shadow-lg">
+                    Explore All 100+ Terms
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themed Collections Section -->
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-playfair font-bold text-shark-navy mb-4">
+                    Curated Learning Paths
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Start your journey with specially curated collections designed for different learning goals and experience levels.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3">Terms Every Teen Should Know</h3>
+                    <p class="text-gray-600 mb-4" data-mock="true">Essential business vocabulary for students and young entrepreneurs starting their journey.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500" data-mock="true">15 terms • 30 mins</span>
+                        <i class="fas fa-arrow-right text-shark-blue"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3">Top 10 Dealbreaker Words</h3>
+                    <p class="text-gray-600 mb-4" data-mock="true">Terms that make or break deals in the tank - know these before you pitch!</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500" data-mock="true">10 terms • 20 mins</span>
+                        <i class="fas fa-arrow-right text-green-600"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3">Startup Funding Essentials</h3>
+                    <p class="text-gray-600 mb-4" data-mock="true">Master the language of investment and funding rounds like a pro.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500" data-mock="true">20 terms • 45 mins</span>
+                        <i class="fas fa-arrow-right text-purple-600"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="gradient-hero py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">
+                    Shark Tank Quiz
+                </h2>
+                <p class="text-xl text-gray-100">
+                    Test your understanding of business terminology
+                </p>
+            </div>
+
+            <!-- Quiz Card -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8">
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>Question 1 of 5</span>
+                        <span><span data-bind="currentScore" data-mock="true">0</span>/5 correct</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-shark-gold h-2 rounded-full transition-all duration-300" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Quiz Question -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-6" data-mock="true">
+                        An entrepreneur asks for ₹50 lakhs for 10% of their company. What is their company valuation?
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <button class="quiz-option w-full p-4 text-left border-2 border-gray-200 rounded-lg hover:border-shark-cyan transition-colors" data-answer="incorrect">
+                            A. ₹50 lakhs
+                        </button>
+                        <button class="quiz-option w-full p-4 text-left border-2 border-gray-200 rounded-lg hover:border-shark-cyan transition-colors" data-answer="correct">
+                            B. ₹5 crores
+                        </button>
+                        <button class="quiz-option w-full p-4 text-left border-2 border-gray-200 rounded-lg hover:border-shark-cyan transition-colors" data-answer="incorrect">
+                            C. ₹5 lakhs
+                        </button>
+                        <button class="quiz-option w-full p-4 text-left border-2 border-gray-200 rounded-lg hover:border-shark-cyan transition-colors" data-answer="incorrect">
+                            D. ₹50 crores
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Controls -->
+                <div class="flex justify-between items-center">
+                    <div class="text-sm text-gray-500">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        <span data-mock="true">Hint: If 10% = ₹50 lakhs, then 100% = ?</span>
+                    </div>
+                    <button class="bg-shark-blue hover:bg-shark-teal text-white px-6 py-3 rounded-full font-semibold transition-colors" data-event="click:nextQuestion">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Results (Hidden by default) -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8 mt-8 hidden" id="quiz-results">
+                <div class="text-center">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h3 class="text-2xl font-playfair font-bold text-shark-navy mb-4">Quiz Complete!</h3>
+                    <p class="text-xl text-gray-600 mb-6" data-mock="true">You got <span class="text-shark-blue font-bold">4 out of 5</span> questions correct!</p>
+                    <div class="flex justify-center gap-4">
+                        <button class="bg-shark-blue hover:bg-shark-teal text-white px-6 py-3 rounded-full font-semibold transition-colors">
+                            Take Another Quiz
+                        </button>
+                        <button class="border-2 border-shark-blue text-shark-blue hover:bg-shark-blue hover:text-white px-6 py-3 rounded-full font-semibold transition-colors">
+                            Learn More Terms
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section id="blog" class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-playfair font-bold text-shark-navy mb-4">
+                    Latest Insights
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stay updated with the latest business terminology trends and Shark Tank episode breakdowns.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <!-- Modern workspace with laptops and business documents on a desk -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Modern business workspace" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-shark-blue/10 text-shark-blue px-3 py-1 rounded-full text-sm font-medium">Analysis</span>
+                            <span class="text-gray-500 text-sm ml-3" data-mock="true">Jan 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3" data-mock="true">
+                            Top 5 Terms Every Shark Tank Pitcher Should Know
+                        </h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            Analysis of the most commonly used business terms in successful Shark Tank India pitches and their impact on deal outcomes.
+                        </p>
+                        <a href="#" class="text-shark-blue hover:text-shark-teal font-semibold text-sm flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <!-- Indian entrepreneurs presenting business ideas in a modern conference room -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Business presentation meeting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Case Study</span>
+                            <span class="text-gray-500 text-sm ml-3" data-mock="true">Jan 12, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3" data-mock="true">
+                            How Understanding CAC Changed This Startup's Fortune
+                        </h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            A deep dive into how one entrepreneur's improved understanding of Customer Acquisition Cost led to a successful deal.
+                        </p>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold text-sm flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <!-- Financial charts and graphs displayed on multiple screens -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Financial analytics dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Guide</span>
+                            <span class="text-gray-500 text-sm ml-3" data-mock="true">Jan 10, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-playfair font-bold text-shark-navy mb-3" data-mock="true">
+                            Decoding Shark Language: What They Really Mean
+                        </h3>
+                        <p class="text-gray-600 mb-4" data-mock="true">
+                            Understanding the subtle meanings behind common phrases used by Shark Tank India judges during negotiations.
+                        </p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold text-sm flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="bg-white hover:bg-gray-50 text-shark-navy border-2 border-shark-navy px-8 py-4 rounded-full font-semibold text-lg transition-colors shadow-lg">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-playfair font-bold text-shark-navy mb-4">
+                    Stay Sharp with Weekly Updates
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Get new business terms, Shark Tank insights, and exclusive content delivered to your inbox.
+                </p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <div class="flex gap-4">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 border-2 border-gray-200 rounded-full focus:outline-none focus:border-shark-blue transition-colors" data-mock="true">
+                    <button class="bg-shark-blue hover:bg-shark-teal text-white px-8 py-4 rounded-full font-semibold whitespace-nowrap transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-3" data-mock="true">
+                    Join 10,000+ entrepreneurs. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-shark-navy text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA0MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMjVIMTBMMTUgMTVIMjBMMjUgMjVIMzBMMzUgMTBINDBMNDUgMjVINTBMNTUgMTVINjAiIHN0cm9rZT0iI0YyRDg1MiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjIiIHk9IjIyIiB3aWR0aD0iMzYiIGhlaWdodD0iMyIgZmlsbD0iI0YyRDg1MiIvPgo8L3N2Zz4=" alt="Shark Tank Lingo" class="h-6 w-8">
+                        <h3 class="text-xl font-playfair font-bold">Shark Tank Lingo</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4" data-mock="true">
+                        Demystifying business terminology for aspiring entrepreneurs and curious learners worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-shark-gold transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-shark-gold transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-shark-gold transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-shark-gold transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#glossary" class="text-gray-300 hover:text-white transition-colors">Business Glossary</a></li>
+                        <li><a href="#quiz" class="text-gray-300 hover:text-white transition-colors">Take Quiz</a></li>
+                        <li><a href="#blog" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Collections</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-mock="true">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center">
+                <p class="text-gray-400" data-mock="true">
+                    © 2024 Shark Tank Lingo. All rights reserved. Made with ❤️ for entrepreneurs.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Quiz functionality
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            let selectedAnswer = null;
+            
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove previous selections
+                    quizOptions.forEach(opt => {
+                        opt.classList.remove('correct', 'incorrect');
+                        opt.style.borderColor = '#e5e7eb';
+                    });
+                    
+                    // Mark selected answer
+                    selectedAnswer = this.dataset.answer;
+                    
+                    // Show correct/incorrect styling
+                    if (selectedAnswer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('incorrect');
+                        // Also highlight the correct answer
+                        document.querySelector('[data-answer="correct"]').classList.add('correct');
+                    }
+                    
+                    // TODO: Implement quiz scoring logic and progress tracking
+                });
+            });
+
+            // Filter functionality for glossary
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const termCards = document.querySelectorAll('[data-category]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-shark-blue', 'text-white');
+                        btn.classList.add('bg-white', 'text-shark-navy', 'border', 'border-gray-200');
+                    });
+                    this.classList.remove('bg-white', 'text-shark-navy', 'border', 'border-gray-200');
+                    this.classList.add('bg-shark-blue', 'text-white');
+                    
+                    // Filter cards
+                    termCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // TODO: Implement more sophisticated filtering with animations
+                });
+            });
+
+            // Search functionality placeholder
+            const searchInput = document.querySelector('input[type="text"]');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    // TODO: Implement real-time search functionality
+                    console.log('Searching for:', searchTerm);
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>

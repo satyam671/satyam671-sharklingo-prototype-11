@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(232, 92%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(232, 92%, 9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(232, 92%, 9%);
+  --primary: hsl(203, 88%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(232, 92%, 9%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 2%, 90%);
+  --muted-foreground: hsl(232, 92%, 9%);
+  --accent: hsl(203, 88%, 53%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(203, 88%, 53%);
+  
+  /* Shark Tank Color Palette - Updated to match specification */
+  --shark-navy: hsl(232, 96%, 8%); /* #010326 */
+  --shark-blue: hsl(216, 83%, 31%); /* #0F468C */
+  --shark-teal: hsl(196, 93%, 35%); /* #0578A6 */
+  --shark-cyan: hsl(192, 96%, 52%); /* #049DBF */
+  --shark-gold: hsl(49, 89%, 64%); /* #F2D852 */
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(232, 92%, 9%);
+  --foreground: hsl(0, 0%, 98%);
+  --card: hsl(232, 84%, 12%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --popover: hsl(232, 92%, 9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --primary: hsl(203, 88%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 98%);
+  --secondary-foreground: hsl(232, 92%, 9%);
+  --muted: hsl(232, 84%, 15%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(203, 88%, 53%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(215, 27%, 32%);
+  --input: hsl(215, 27%, 32%);
+  --ring: hsl(203, 88%, 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(232, 96%, 8%) 0%, hsl(216, 83%, 20%) 25%, hsl(196, 93%, 25%) 50%, hsl(192, 96%, 35%) 75%, hsl(49, 89%, 45%) 100%);
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-glow {
+    filter: drop-shadow(0 0 10px rgba(73, 157, 191, 0.3));
+    transition: filter 0.3s ease;
+  }
+
+  .logo-glow:hover {
+    filter: drop-shadow(0 0 20px rgba(73, 157, 191, 0.6));
+  }
+
+  .quiz-option {
+    transition: all 0.2s ease;
+  }
+
+  .quiz-option:hover {
+    background-color: hsl(192, 96%, 52%, 0.1);
+    border-color: hsl(192, 96%, 52%);
+  }
+
+  .quiz-option.correct {
+    background-color: hsl(142, 76%, 36%, 0.1);
+    border-color: hsl(142, 76%, 36%);
+  }
+
+  .quiz-option.incorrect {
+    background-color: hsl(0, 84%, 60%, 0.1);
+    border-color: hsl(0, 84%, 60%);
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@layer utilities {
+  .text-shark-navy {
+    color: hsl(232, 96%, 8%);
+  }
+  
+  .text-shark-blue {
+    color: hsl(216, 83%, 31%);
+  }
+  
+  .text-shark-teal {
+    color: hsl(196, 93%, 35%);
+  }
+  
+  .text-shark-cyan {
+    color: hsl(192, 96%, 52%);
+  }
+  
+  .text-shark-gold {
+    color: hsl(49, 89%, 64%);
+  }
+  
+  .bg-shark-navy {
+    background-color: hsl(232, 96%, 8%);
+  }
+  
+  .bg-shark-blue {
+    background-color: hsl(216, 83%, 31%);
+  }
+  
+  .bg-shark-teal {
+    background-color: hsl(196, 93%, 35%);
+  }
+  
+  .bg-shark-cyan {
+    background-color: hsl(192, 96%, 52%);
+  }
+  
+  .bg-shark-gold {
+    background-color: hsl(49, 89%, 64%);
+  }
+  
+  .border-shark-navy {
+    border-color: hsl(232, 96%, 8%);
+  }
+  
+  .border-shark-blue {
+    border-color: hsl(216, 83%, 31%);
+  }
+  
+  .border-shark-teal {
+    border-color: hsl(196, 93%, 35%);
+  }
+  
+  .border-shark-cyan {
+    border-color: hsl(192, 96%, 52%);
+  }
+  
+  .border-shark-gold {
+    border-color: hsl(49, 89%, 64%);
+  }
+}

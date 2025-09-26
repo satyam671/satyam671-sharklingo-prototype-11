@@ -1,0 +1,84 @@
+# Role and Objective
+Build a modern, responsive static website-'Shark Tank Lingo' that demystifies complex business terminology from Shark Tank. Each term should be explained in **layman's language**, supported by **real-world examples** that resonate with non-business audiences. The site should be engaging, educational, and visually appealing, using gamification and interactive storytelling to boost retention.
+
+# Instructions
+- Create a static, fast, mobile-friendly web experience; no authentication or backend required for the MVP.
+- Follow Google's Material Design guidelines for UI/UX clarity and modernity.
+- Prioritize simplicity, accessibility, and playful educational engagement.
+- use the following color palette on the site and use linear gradient style background color in the hero section and anywhere where background color is applicable: #010326, #0F468C,#0578A6, #049DBF, #F2D852
+- use serif/Playfair font 
+- the website is specifically tailored for shark tank India audiences, fans, entrepreneurs and pitchers.
+- include shark tank India judges quotes, illustrations and their famous sayings in local language.
+# User Journey / Flow
+- Homepage styled after Shark Tank (modern and minimalist) with a prominent search bar.
+- Each business term should have following detail: original definition followed by explanation in layman's terms with real-world example, Shark Tank reference, and founder quote from shark tank India and US.
+- Gamified elements like quizzes (“Guess the Deal,” “What Would the Shark Do?”) reinforce learning.
+- Fully open and anonymous access; no login required.
+- Optionally, explore themed term collections (e.g., “Terms Every Teen Should Know,” “Top 10 Dealbreaker Words”).
+- Dedicated blog section.
+
+## 🧱 Tech Stack
+### 🔹 Frontend
+- **HTML5** → Semantic structure and accessible markup
+- **CSS3 (Flexbox, Grid, Media Queries)** → Responsive layouts across devices
+- **SCSS/SASS** → Modular, maintainable styling compiled into CSS
+- **CSS Animations & Transitions** → Interactive effects without JavaScript
+- **Google Fonts / Variable Fonts** → Clean, modern typography
+- 
+
+# Target Audience
+- Casual Shark Tank viewers
+- Aspiring entrepreneurs
+- Students and curious learners
+- Non-business individuals seeking to understand startup lingo without jargon
+# Core Features
+- Searchable glossary with clear, layman's definitions
+- Shark Tank and real-world examples for terms
+- icons for each term
+- Founder quotes and insights
+- Gamified quizzes, and interactive storytelling
+- No authentication; open access
+# Tech Stack Recommendations
+- Static site generator: Astro or Next.js (static export)
+- Lightweight CMS: Markdown-based content storage
+- Illustrations: Open-source illustrations from undraw.co or custom SVGs
+- Gamification: Client-side JavaScript (no backend initially)
+- Hosting: Vercel or Netlify (free tier)
+# Design Vibe
+- Minimalist UI with a Shark Tank-inspired color palette (dark blues, spotlight effects)
+- Playful, educational tone (Duolingo meets startup school)
+- Mobile-first responsive design
+- Use emojis, icons for engagement
+
+# 🎨 UI/UX Design Guidelines
+Follow Google’s Material Design principles:
+- Cards and elevation: Paper-like cards with shadows for hierarchy
+- Bold colors: Use Material Design palette for clarity and vibrancy
+- Grid system: Consistent spacing and layout
+- Flat buttons with hover/ripple effects
+- Typography: Google-recommended typefaces for readability, serif Playfair font in the introduction in hero section.
+- Micro-interactions: Subtle transitions between states
+- Responsive animations across devices
+# 🕹️ Engagement Features
+- Real-world examples: Connect terms to everyday life or Shark Tank pitches
+- Optional client-side search and filtering for quick lookups
+
+# 🚀 MVP Scope
+Start with these components:
+## Landing Page
+- Hero section with bold introduction
+- Preview of featured terms
+- Clear CTA to explore the glossary
+
+## Glossary Pages
+- For each term, include:
+- Simple, layman's definition
+- Real-world example
+- Illustration or icon
+- quiz section at the end with progress bar and correct/incorrect answers indicator
+---
+## 🧠 Notes
+- Prioritize accessibility and performance
+- Keep the build lean and privacy-first
+- Design for global audiences with beginner-friendly UX
+
